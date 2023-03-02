@@ -1,0 +1,18 @@
+if (username.length() < 6) {
+            System.out.println("error");
+            return;
+        }
+        // password must contain a capital letter, a special character and a number
+        if (password.length() < 8) {
+            System.out.println("error");
+            return;
+        } else if (!password.matches("^(.*\\d+.*)$")) {
+            System.out.println("error");
+            return;
+        } else if (!password.matches("^(.*[A-Z]+.*)$")) {
+            System.out.println("error");
+            return;
+        } else if (!password.matches("^(.*[!@#$%^&*(),.?\"':{}|<>]+.*)$")) {
+            System.out.println("error");
+            return;
+        }
